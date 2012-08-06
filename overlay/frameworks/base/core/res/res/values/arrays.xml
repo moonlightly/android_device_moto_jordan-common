@@ -20,7 +20,7 @@
 
      <!-- reboot options -->
     <array name="reboot_options">
-        <item>@string/reboot_reboot</item>
+        <item>@string/reboot</item>
         <item>@string/reboot_recovery</item>
         <item>@string/reboot_bootmenu</item>
     </array>
