@@ -23,7 +23,7 @@
         <item>@string/reboot_reboot</item>
         <item>@string/reboot_recovery</item>
         <item>@string/reboot_bootmenu</item>
-    <array>
+    </array>
 
     <!-- reboot values -->
     <string-array name="reboot_values">
