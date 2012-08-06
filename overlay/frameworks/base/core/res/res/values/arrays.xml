@@ -19,7 +19,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
      <!-- reboot options -->
-    <string-array name="reboot_options">
+    <array name="reboot_options">
         <item>@string/reboot</item>
         <item>@string/reboot_recovery</item>
         <item>@string/reboot_bootmenu</item>
