@@ -55,7 +55,7 @@ WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wifi/fw_wlan1271.bin"
 WIFI_FIRMWARE_LOADER        := wlan_loader
 PRODUCT_WIRELESS_TOOLS      := true
 BOARD_SOFTAP_DEVICE         := wl1271
-AP_CONFIG_DRIVER_WILINK     := false
+AP_CONFIG_DRIVER_WILINK     := true
 WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wifi/fw_tiwlan_ap.bin"
 WPA_SUPPL_APPROX_USE_RSSI   := true
 WPA_SUPPL_WITH_SIGNAL_POLL  := true
@@ -67,7 +67,7 @@ WIFI_AP_FIRMWARE_LOADER     := wlan_ap_loader
 WIFI_AP_DRIVER_MODULE_ARG   := ""
 BOARD_HOSTAPD_SERVICE_NAME  := hostap_netd
 BOARD_HOSTAPD_NO_ENTROPY    := true
-BOARD_HOSTAPD_DRIVER        := false
+BOARD_HOSTAPD_DRIVER        := true
 BOARD_HOSTAPD_DRIVER_NAME   := wilink
 #BOARD_HOSTAPD_TIAP_ROOT     := system/wlan/ti/WiLink_AP
 
