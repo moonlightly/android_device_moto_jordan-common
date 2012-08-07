@@ -67,7 +67,7 @@ WIFI_AP_FIRMWARE_LOADER     := wlan_ap_loader
 WIFI_AP_DRIVER_MODULE_ARG   := ""
 BOARD_HOSTAPD_SERVICE_NAME  := hostap_netd
 BOARD_HOSTAPD_NO_ENTROPY    := true
-BOARD_HOSTAPD_DRIVER        := true
+BOARD_HOSTAPD_DRIVER        := false
 BOARD_HOSTAPD_DRIVER_NAME   := wilink
 #BOARD_HOSTAPD_TIAP_ROOT     := system/wlan/ti/WiLink_AP
 
