@@ -4,7 +4,7 @@ ICS for Motorola Defy (Android 4.0.1 AOSP)
 Download:
 =========
 
-repo init -u git://github.com/CyanogenDefy/android.git -b ics
+repo init -u git://github.com/Kayant/android.git -b ics
 
 repo sync
 
