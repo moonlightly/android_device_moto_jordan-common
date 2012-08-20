@@ -101,6 +101,6 @@ PRODUCT_COPY_FILES += \
         ${bm_device}/bootmenu/recovery/sbin/tune2fs.bin:system/bootmenu/recovery/sbin/tune2fs \
         ${bm_device}/bootmenu/recovery/sbin/mke2fs.bin:system/bootmenu/recovery/sbin/mke2fs.bin \
 	${bm_device}/bootmenu/recovery/recovery.fstab:system/bootmenu/recovery/recovery.fstab \
-        ${bm_device}/bootmenu/recovery/root/sbin/pigz:system/bootmenu/recovery/sbin/pigz \
+        ${bm_device}/bootmenu/recovery/sbin/pigz:system/bootmenu/recovery/sbin/pigz \
         
 
