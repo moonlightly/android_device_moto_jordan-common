@@ -125,11 +125,6 @@ BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/moto/jordan-common/recovery_keys
 TARGET_RECOVERY_PRE_COMMAND := "/system/bootmenu/script/reboot_command.sh"
 TARGET_RECOVERY_PRE_COMMAND_CLEAR_REASON := true
 
-# FM Radio (not ready in ICS)
-# BOARD_HAVE_FM_RADIO := true
-# BOARD_FM_DEVICE := wl1271
-# COMMON_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
-
 # Egl Specific
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/moto/jordan-common/egl.cfg
@@ -137,6 +132,7 @@ DEFAULT_FB_NUM := 0
 BOARD_USE_YUV422I_DEFAULT_COLORFORMAT := true
 BOARD_USES_OVERLAY := true
 ENABLE_WEBGL := true
+COMMON_GLOBAL_CFLAGS += -DSYSTEMUI_PBSIZE_HACK=1
 
 # Camera
 BOARD_OVERLAY_BASED_CAMERA_HAL := true
@@ -150,6 +146,7 @@ TARGET_PROVIDES_LIBAUDIO := true
 BOARD_USE_KINETO_COMPATIBILITY := true
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
+TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # If kernel sources are present in repo, here is the location
 #TARGET_KERNEL_SOURCE := $(ANDROID_BUILD_TOP)/kernel-omap

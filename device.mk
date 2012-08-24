@@ -20,7 +20,6 @@
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
-$(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
 ifeq ($(TARGET_PRODUCT),$(filter $(TARGET_PRODUCT), aokp_mb525 aokp_mb526))
 $(call inherit-product, vendor/motorola/jordan-common/jordan-vendor.mk)
