@@ -12,7 +12,9 @@ on init
 
     start pvr_reloader
 
-    #PVR Drivers
+    #Load qtouch driver
+    insmod /system/lib/modules/qtouch_unload.ko
+    insmod /system/lib/modules/qtouch_obp_ts2.ko
 
     # Load kernel modules
     insmod /system/lib/modules/netmux.ko
@@ -298,7 +300,7 @@ service wpa_supplicant /system/bin/wpa_supplicant -Dtiwlan0 -itiwlan0 -c/data/mi
     disabled
     oneshot
 
-service hostap_netd /system/bin/hostap -d /data/misc/wifi/hostapd.conf
+service hostapd_bin /system/etc/wifi/hostap_wrapper.sh
     class main
     group wifi system inet net_admin
     socket tiap0 dgram 660 wifi wifi
