@@ -37,9 +37,13 @@ TARGET_BOARD_PLATFORM := omap3
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH_VARIANT_CPU := cortex-a8
+TARGET_ARCH_VARIANT_FPU := neon
 TARGET_OMAP3 := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 COMMON_GLOBAL_CFLAGS += -DTARGET_OMAP3 -DOMAP_COMPAT -DBINDER_COMPAT
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
 
 # Wifi related defines
 BOARD_WLAN_DEVICE           := wl1271
@@ -66,10 +70,7 @@ WIFI_AP_DRIVER_MODULE_ARG   := ""
 BOARD_HOSTAPD_NO_ENTROPY    := true
 BOARD_HOSTAPD_DRIVER        := true
 BOARD_HOSTAPD_DRIVER_NAME   := wilink
-#BOARD_HOSTAPD_TIAP_ROOT     := system/wlan/ti/WiLink_AP
-
-# Netfilter
-#BOARD_WITHOUT_IPV6_QUOTA := true
+BOARD_HOSTAPD_TIAP_ROOT     := system/wlan/ti/WiLink_AP
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -128,7 +129,7 @@ COMMON_GLOBAL_CFLAGS += -DSYSTEMUI_PBSIZE_HACK=1
 USE_CAMERA_STUB := false
 BOARD_OVERLAY_BASED_CAMERA_HAL := true
 
-# Other..u
+# Other..
 BOARD_USES_AUDIO_LEGACY := true
 TARGET_PROVIDES_LIBAUDIO := true
 BOARD_USE_KINETO_COMPATIBILITY := true
@@ -141,7 +142,7 @@ TARGET_MODULES_AP_SOURCE := "system/wlan/ti/WiLink_AP/platforms/os/linux/"
 API_MAKE := \
 	make PREFIX=$(ANDROID_BUILD_TOP)/$(TARGET_OUT_INTERMEDIATES)/kernel_intermediates/build \
 	ARCH=arm \
-	CROSS_COMPILE=$(ANDROID_BUILD_TOP)/prebuilt/$(HOST_PREBUILT_TAG)/toolchain/arm-eabi-4.4.3/bin/arm-eabi- \
+	CROSS_COMPILE=$(ANDROID_BUILD_TOP)/prebuilt/$(HOST_PREBUILT_TAG)/toolchain/arm-eabi-4.5.4-linaro/bin/arm-eabi- \
 	HOST_PLATFORM=zoom2 \
 	KERNEL_DIR=$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ \
 
@@ -155,7 +156,7 @@ ext_modules:
 	$(API_MAKE) -C $(TARGET_MODULES_AP_SOURCE) HOST_PLATFORM=zoom2 KERNEL_DIR=$(KERNEL_OUT)
 	mv system/wlan/ti/wilink_6_1/platforms/os/linux/tiwlan_drv.ko $(KERNEL_MODULES_OUT)
 	mv system/wlan/ti/WiLink_AP/platforms/os/linux/tiap_drv.ko $(KERNEL_MODULES_OUT)
-	arm-eabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/*
+	arm-linux-androideabi-strip --strip-unneeded $(KERNEL_MODULES_OUT)/*
 
 hboot:
 	mkdir -p $(PRODUCT_OUT)/system/bootmenu/2nd-boot   
@@ -166,7 +167,7 @@ hboot:
 
 # If kernel sources are present in repo, here is the location
 TARGET_KERNEL_SOURCE := $(ANDROID_BUILD_TOP)/jordan-kernel
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.5.4-linaro
 TARGET_KERNEL_CONFIG  := mapphone_defconfig
 BOARD_KERNEL_CMDLINE := console=/dev/null mem=498M init=/init ip=off brdrev=P3A omapfb.vram=0:4M
 #TARGET_PREBUILT_KERNEL := $(ANDROID_BUILD_TOP)/device/moto/jordan-common/kernel
