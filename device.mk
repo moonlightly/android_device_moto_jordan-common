@@ -21,8 +21,8 @@
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-ifeq ($(TARGET_PRODUCT),$(filter $(TARGET_PRODUCT),cm_mb525 cm_mb526))
-$(call inherit-product, vendor/motorola/jordan-common/jordan-vendor.mk)
+ifeq ($(TARGET_PRODUCT),$(filter $(TARGET_PRODUCT), cna_mb526))
+$(call inherit-product, vendor/motorola/jordan-common/jordan-vendor-blobs.mk)
 endif
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
