@@ -22,7 +22,7 @@
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 ifeq ($(TARGET_PRODUCT),$(filter $(TARGET_PRODUCT), cna_mb526))
-$(call inherit-product, vendor/motorola/jordan-common/jordan-vendor-blobs.mk)
+$(call inherit-product, vendor/motorola/jordan-common/jordan-vendor.mk)
 endif
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
