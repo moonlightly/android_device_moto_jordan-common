@@ -51,6 +51,9 @@ TARGET_thumb_CFLAGS := -mthumb \
                         -fomit-frame-pointer \
                         -fstrict-aliasing
 
+# Compiler Optimization
+ARCH_ARM_HIGH_OPTIMIZATION := true
+
 # Wifi related defines
 BOARD_WLAN_DEVICE           := wl1271
 WPA_SUPPLICANT_VERSION      := VER_0_6_X
