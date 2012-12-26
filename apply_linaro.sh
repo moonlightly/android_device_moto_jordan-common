@@ -70,6 +70,4 @@ echo
 cd ../../packages/inputmethods/LatinIME
 git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_inputmethods_LatinIME refs/changes/63/26563/1 && git cherry-pick FETCH_HEAD
 echo
-cd ../../external/lsof
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_external_lsof refs/changes/44/26544/1 && git cherry-pick FETCH_HEAD
 echo Finished
