@@ -27,7 +27,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-	${bm_device}/profiles/ramdisk/ueventd.rc:root/ueventd.rc \
+	${bm_device}/profiles/ramdisk/ueventd.mapphone_umts.rc:root/ueventd.mapphone_umts.rc \
 	${bm_device}/profiles/ramdisk/init.usb.rc:root/init.usb.rc \
 	${bm_device}/profiles/ramdisk/init.mapphone_umts.rc:root/init.mapphone_umts.rc \
 
@@ -44,7 +44,6 @@ PRODUCT_COPY_FILES += \
 	${bm_device}/bootmenu/script/pre_bootmenu.sh:system/bootmenu/script/pre_bootmenu.sh \
 	${bm_device}/bootmenu/script/reboot_command.sh:system/bootmenu/script/reboot_command.sh \
 	${bm_device}/bootmenu/script/recovery.sh:system/bootmenu/script/recovery.sh \
-	${bm_device}/bootmenu/script/recovery_stable.sh:system/bootmenu/script/recovery_stable.sh \
 	${bm_device}/bootmenu/script/sdcard.sh:system/bootmenu/script/sdcard.sh \
 	${bm_device}/bootmenu/script/system.sh:system/bootmenu/script/system.sh \
 	${bm_device}/bootmenu/script/pdsbackup.sh:system/bootmenu/script/pdsbackup.sh \
