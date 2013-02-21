@@ -43,6 +43,7 @@ PRODUCT_COPY_FILES += \
 	$(device_path)/prebuilt/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
 	$(device_path)/prebuilt/etc/init.d/08backlight:system/etc/init.d/08backlight \
 	$(device_path)/prebuilt/etc/init.d/90multitouch:system/etc/init.d/90multitouch \
+        $(device_path)/etc/init.d/00frandom:/system/etc/init.d/00frandom \
 	$(device_path)/prebuilt/etc/profile:system/etc/profile \
 	$(device_path)/prebuilt/etc/sysctl.conf:system/etc/sysctl.conf \
 	$(device_path)/prebuilt/etc/busybox.fstab:system/etc/fstab \
