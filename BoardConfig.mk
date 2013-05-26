@@ -118,7 +118,6 @@ BOARD_UMS_LUNFILE := /sys/class/android_usb/f_mass_storage/lun/file
 # Release tool
 TARGET_PROVIDES_RELEASETOOLS := true
 TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/moto/jordan-common/releasetools/common_ota_from_target_files
-TARGET_CUSTOM_RELEASETOOL := ./device/moto/mb526/releasetools/squisher
 
 # Egl Specific
 USE_OPENGL_RENDERER := true
